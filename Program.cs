@@ -18,7 +18,7 @@ namespace collatz
 
         private static void go(long range)
         {
-            ushort[] result = new ushort[range+1];
+            ushort[] result = new ushort[range];
             Parallel.ForEach(result, (r, psl, index) =>
             {
                 long i = index;
