@@ -12,7 +12,7 @@ namespace collatz
         {
             var start = DateTime.Now;
             go(1000*1000);
-            Console.WriteLine("" + (int)(DateTime.Now - start).TotalMilliseconds + " ms. number: " + maxval + ". steps: " + maxsteps);
+            Console.WriteLine("" + (int)(DateTime.Now - start).TotalMilliseconds + " ms. number: " + maxval + ". steps: " + (ushort)(maxsteps -1));
             Console.ReadKey();
         }
 
@@ -36,7 +36,7 @@ namespace collatz
                 result[index] = steps;
                 if (steps > maxsteps)
                 {
-                    maxsteps = steps - 1;
+                    maxsteps = steps;
                     maxval = index;
                 }
             });
