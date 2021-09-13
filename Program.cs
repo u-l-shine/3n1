@@ -11,8 +11,8 @@ namespace collatz
         static void Main(string[] args)
         {
             var start = DateTime.Now;
-            go(1000*1000);
-            Console.WriteLine("" + (int)(DateTime.Now - start).TotalMilliseconds + " ms. number: " + maxval + ". steps: " + (ushort)(maxsteps -1));
+            go(1000_000);
+            Console.WriteLine($"{(DateTime.Now - start).TotalMilliseconds}  ms. number: {maxval}. steps: {maxsteps -1}");
             Console.ReadKey();
         }
 
